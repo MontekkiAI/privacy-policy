@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Hookly Privacy Policy</title>
+  <style>
+    :root {
+      --bg: #ffffff;
+      --text: #1f2937;
+      --muted: #5b6472;
+      --line: #e5e7eb;
+      --accent: #6d28d9;
+      --soft: #f5f3ff;
+    }
+    @media (prefers-color-scheme: dark) {
+      :root {
+        --bg: #14121a;
+        --text: #e8e6ee;
+        --muted: #a29fb0;
+        --line: #2b2836;
+        --accent: #b79cff;
+        --soft: #1d1a29;
+      }
+    }
+    html { background: var(--bg); }
+    body {
+      max-width: 720px;
+      margin: 40px auto;
+      padding: 0 20px 60px;
+      color: var(--text);
+      font: 16px/1.65 system-ui, -apple-system, "Segoe UI", Roboto, sans-serif;
+    }
+    h1, h2 { line-height: 1.25; }
+    h1 { margin-bottom: 4px; }
+    h2 { margin-top: 36px; padding-top: 8px; border-top: 1px solid var(--line); font-size: 1.15rem; }
+    a { color: var(--accent); }
+    .meta { color: var(--muted); margin-top: 0; }
+    .summary { padding: 12px 16px; border-left: 4px solid var(--accent); background: var(--soft); }
+    table { width: 100%; border-collapse: collapse; font-size: 0.95rem; }
+    th, td { text-align: left; vertical-align: top; padding: 8px 10px; border-bottom: 1px solid var(--line); }
+    th { width: 34%; font-weight: 600; }
+    code { font-size: 0.9em; }
+  </style>
+</head>
+<body>
+  <h1>Hookly Privacy Policy</h1>
+  <p class="meta">Effective date: October 27, 2026</p>
+
+  <p class="summary">In short: Hookly keeps your settings, API key, scan history and CRM leads in your own browser. There is no Hookly account, server, analytics, or advertising. The only service that receives data is Google Gemini, and only when you use an AI feature with your own API key.</p>
+
+  <h2>What Hookly does</h2>
+  <p>Hookly is a Chrome extension for finding business contact details on websites you choose to scan, organizing them in a local CRM, and optionally using Google Gemini to check those contacts and draft outreach emails.</p>
+
+  <h2>Data stored on your device</h2>
+  <p>Hookly stores the following in Chrome's local extension storage (<code>chrome.storage.local</code>) in your browser profile. It is not synced to your Google account and is not sent to any Hookly server:</p>
+  <ul>
+    <li>Your Google Gemini API key (stored unencrypted in local extension storage, like other extensions that use your own key)</li>
+    <li>Your sender profile (name, role, company, offer, target audience, signature) and custom contact role labels</li>
+    <li>Scan history (up to 20 scans), CRM leads, notes, saved email drafts and lead statuses</li>
+    <li>A short activity log of actions such as "scan complete" (no keys or contact data)</li>
+  </ul>
+  <p>You can remove your API key in Settings, clear scan history, delete leads, or uninstall the extension to remove this data. CSV exports are saved where you choose.</p>
+
+  <h2>Website access and scanning</h2>
+  <p>When you press Scan, Hookly reads the text, links and contact details (emails, phone numbers, LinkedIn, X and Instagram links) on the active page. With Deep Scan it may also request a few relevant pages from the same website (for example, contact or about pages) without sending cookies. This happens in your browser. Hookly does not scan in the background and does not collect your general browsing history.</p>
+  <p>Contact details found on websites can include personal data of other people, such as names, job titles, work emails and phone numbers. Hookly stores this only in your browser. You are responsible for using it lawfully, including complying with applicable privacy, anti-spam and marketing laws where you and your recipients are located.</p>
+
+  <h2>Google Gemini (optional)</h2>
+  <p>If you add a Gemini API key and use AI contact analysis or AI email drafting, Hookly sends a request directly from your browser to Google's Gemini API (<code>generativelanguage.googleapis.com</code>). Depending on the feature, the request can include:</p>
+  <ul>
+    <li>Scraped contact candidates (emails, phone numbers, social links) and the short surrounding text from the page, the site domain and company name</li>
+    <li>The page title, description, main headings and value proposition</li>
+    <li>The selected recipient's email and any name, job title or role found for them</li>
+    <li>Your sender profile, used to write the draft</li>
+    <li>Your API key, sent to Google to authorize the request</li>
+  </ul>
+  <p>Hookly does not send this data to anyone else. Google processes API requests under its own terms and privacy practices, which can differ depending on your API plan and settings, so review them before adding a key. Usage and any charges belong to your Google account. Without a key, scanning still works and AI features are unavailable.</p>
+
+  <h2>Other third-party requests</h2>
+  <p>To show a site's icon,
